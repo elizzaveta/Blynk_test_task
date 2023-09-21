@@ -5,7 +5,7 @@ export const itemsSlice = createSlice({
     name: 'items',
     initialState: {
         items: JSON.parse(window.localStorage.getItem(itemsKey)) || [],
-        activeItem: (JSON.parse(window.localStorage.getItem(itemsKey))).find(item => item.id === parseInt(window.localStorage.getItem(activeItemIdKey))) || null,
+        activeItem: (JSON.parse(window.localStorage.getItem(itemsKey)))?.find(item => item.id === parseInt(window.localStorage.getItem(activeItemIdKey))) || null,
     },
     reducers: {
         addItem: (state, payloadAction) => {
