@@ -1,6 +1,4 @@
 import React from 'react';
-import {localStorageUpdateValueByKey} from "../../functions/localStorage";
-import {activeItemIdKey} from "../../consts/LocalStorageKeys";
 import DeleteButton from "./DeleteButton";
 import {useDispatch, useSelector} from "react-redux";
 import {setActiveItem} from "../../redux/itemsSlice";
@@ -11,8 +9,7 @@ const Item = (props) => {
     const activeItem = useSelector(state => state.items.activeItem);
     const dispatch = useDispatch();
 
-    const handleClick = (id) => {
-        localStorageUpdateValueByKey(activeItemIdKey, id);
+    const handleClick = () => {
         dispatch(setActiveItem(item));
     }
 

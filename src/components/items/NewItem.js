@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import {localStoragePushToItemByKey} from "../../functions/localStorage";
-import {itemsKey} from "../../consts/LocalStorageKeys";
 import {useDispatch} from "react-redux";
 import {addItem, setActiveItem} from "../../redux/itemsSlice"
 import buttonStyles from '../../assets/css/Button.module.css'
@@ -18,7 +16,6 @@ const NewItem = () => {
             name: itemName,
             comments: [],
         }
-        localStoragePushToItemByKey(itemsKey, newItem);
         dispatch(addItem(newItem));
         dispatch(setActiveItem(newItem));
         setItemName('');

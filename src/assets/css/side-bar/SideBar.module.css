@@ -1,9 +1,11 @@
 .wrapper{
     background: var(--primary-color);
     padding: 0.6em;
+    min-width: 250px;
 }
 .wrapper h1{
     color: white;
+    font-size: 2rem;
 }
 .wrapper p{
     color: var(--dark-gray);

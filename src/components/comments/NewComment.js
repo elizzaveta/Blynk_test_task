@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {localStorageAddCommentToItem} from "../../functions/localStorage";
 import {addComment} from "../../redux/itemsSlice";
 import {useDispatch, useSelector} from "react-redux";
 import formStyles from '../../assets/css/Form.module.css'
@@ -19,7 +18,7 @@ const NewComment = () => {
         }
         setComment('');
         setColor('#000000');
-        localStorageAddCommentToItem(activeItem.id, newComment);
+        // localStorageAddCommentToItem(activeItem.id, newComment);
         dispatch(addComment(newComment));
     }
 
