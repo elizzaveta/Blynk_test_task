@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {localStorageAddCommentToItem} from "../../functions/localStorage";
 import {addComment} from "../../redux/itemsSlice";
 import {useDispatch, useSelector} from "react-redux";
+import formStyles from '../../assets/css/Form.module.css'
+import buttonStyles from '../../assets/css/Button.module.css'
 
 const NewComment = () => {
     const [comment, setComment] = useState('');
@@ -23,15 +25,14 @@ const NewComment = () => {
 
 
     return (
-        <div>
-            <form onSubmit={submitForm}>
-                <input type='color' value={color} disabled={!activeItem}
-                       onChange={(e)=>setColor(e.target.value)}/>
-                <input type='text' value={comment} required disabled={!activeItem}
-                       onChange={(e)=>setComment(e.target.value)}/>
-                <input type='submit' value='Add New'/>
-            </form>
-        </div>
+        <form onSubmit={submitForm} className={formStyles.form}>
+            <input type='color' value={color} className={formStyles.colorInput} disabled={!activeItem}
+                   onChange={(e) => setColor(e.target.value)}/>
+            <textarea placeholder='Type comment here...' value={comment} className={formStyles.textInput} required
+                      disabled={!activeItem}
+                      onChange={(e) => setComment(e.target.value)}/>
+            <input type='submit' value='Add New' className={`${buttonStyles.coldBlueButton} ${buttonStyles.button}`}/>
+        </form>
     );
 };
 

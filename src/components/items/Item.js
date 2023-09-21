@@ -2,11 +2,13 @@ import React from 'react';
 import {localStorageUpdateValueByKey} from "../../functions/localStorage";
 import {activeItemIdKey} from "../../consts/LocalStorageKeys";
 import DeleteButton from "./DeleteButton";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {setActiveItem} from "../../redux/itemsSlice";
+import styles from '../../assets/css/items/Item.module.css';
 
 const Item = (props) => {
     const {item} = props;
+    const activeItem = useSelector(state => state.items.activeItem);
     const dispatch = useDispatch();
 
     const handleClick = (id) => {
@@ -15,8 +17,10 @@ const Item = (props) => {
     }
 
     return (
-        <div>
-            <p onClick={()=>handleClick(item.id)}>{item.name}</p>
+        <div className={`${styles.wrapper} ${item.id === activeItem.id ? styles.activeItem : ''}`}
+             onClick={()=>handleClick(item.id)}>
+            <p className={styles.itemName}>{item.name}</p>
+            <div className={styles.badge}>{item.comments.length}</div>
             <DeleteButton itemId={item.id}/>
         </div>
     );

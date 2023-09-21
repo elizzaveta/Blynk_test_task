@@ -1,0 +1,10 @@
+.wrapper{
+    background: var(--primary-color);
+    padding: 0.6em;
+}
+.wrapper h1{
+    color: white;
+}
+.wrapper p{
+    color: var(--dark-gray);
+}

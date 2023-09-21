@@ -1,3 +1,25 @@
 .wrapper{
+    border-bottom: 1px solid var(--medium-gray);
+    margin-bottom: -1px;
+    display: flex;
+    padding: 12px 20px;
+    align-items: center;
+}
+.wrapper:last-child{
+    border-bottom: none;
+}
+.activeItem{
+    border-left: 4px solid deeppink;
+}
 
+.itemName{
+    width: 100%;
+    text-align: left;
+}
+.badge{
+    padding: 0 0.5em;
+    margin: 0 1em;
+    background: var(--warm-blue);
+    border-radius: 10rem;
+    color: white;
 }

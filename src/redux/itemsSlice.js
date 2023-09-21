@@ -16,7 +16,7 @@ export const itemsSlice = createSlice({
             const itemId = payloadAction.payload;
             state.items = state.items.filter(item => item.id !== itemId);
             if (state.activeItem && itemId === state.activeItem.id) {
-                state.activeItem = state.items.length !== 0 ? state.items[0] : null;
+                state.activeItem = state.items.length !== 0 ? state.items[state.items.length-1] : null;
             }
         },
         setActiveItem: (state, payloadAction) => {

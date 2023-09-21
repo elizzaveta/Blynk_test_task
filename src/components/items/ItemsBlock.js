@@ -1,12 +1,12 @@
 import React from 'react';
 import NewItem from "./NewItem";
 import ItemsContainer from "./ItemsContainer";
-import styles from '../../assets/css/items/ItemsBlock.module.css'
+import containerStyles from '../../assets/css/Container.module.css'
 
 const ItemsBlock = () => {
 
     return (
-        <div className={styles.wrapper}>
+        <div className={containerStyles.containerWithShadow}>
             <h1>Items</h1>
             <NewItem/>
             <ItemsContainer/>

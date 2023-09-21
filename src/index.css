@@ -5,9 +5,31 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: #2b2f3e;
+  --dark-gray: #5b5d63;
+  --gray: gray;
+  --warm-blue: #17a2b8;
+  --cold-blue: #007bff;
+  --light-gray: #f9f9f9;
+  --medium-gray: #ced4da;
+  --red: #dc3545;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  font-weight: 400;
+}
+h1{
+  font-size: 2.5rem;
+}
+p{
+  margin: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+

@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 import {localStoragePushToItemByKey} from "../../functions/localStorage";
 import {itemsKey} from "../../consts/LocalStorageKeys";
 import {useDispatch} from "react-redux";
-import {addItem, setActiveItem} from "../../redux/itemsSlice";
+import {addItem, setActiveItem} from "../../redux/itemsSlice"
+import buttonStyles from '../../assets/css/Button.module.css'
+import formStyles from '../../assets/css/Form.module.css'
 
 const NewItem = () => {
     const dispatch = useDispatch();
@@ -12,7 +14,7 @@ const NewItem = () => {
         e.preventDefault();
 
         const newItem = {
-            id: Date.now(),
+            id: Math.floor(10000000 + Math.random() * 90000000),
             name: itemName,
             comments: [],
         }
@@ -23,13 +25,11 @@ const NewItem = () => {
     }
 
     return (
-        <div>
-            <form onSubmit={submitForm}>
-                <input type='text' value={itemName} required
-                       onChange={(e)=>setItemName(e.target.value)}/>
-                <input type='submit' value='Add New'/>
-            </form>
-        </div>
+        <form onSubmit={submitForm} className={formStyles.form}>
+            <input type='text' placeholder='Type name here...' value={itemName} className={formStyles.textInput} required
+                   onChange={(e)=>setItemName(e.target.value)}/>
+            <input type='submit' value='Add New' className={`${buttonStyles.warmBlueButton} ${buttonStyles.button}`}/>
+        </form>
     );
 };
 
