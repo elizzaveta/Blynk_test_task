@@ -1,6 +1,5 @@
 .wrapper {
     display: flex;
-    justify-content: space-between;
     min-height: 100vh;
     height: 100%;
 }
@@ -23,5 +22,18 @@
     .mainContainer{
         justify-content: center;
         gap: 3vw;
+    }
+}
+
+@media (min-width: 840px) {
+    .wrapper{
+        justify-content: space-between;
+
+    }
+
+}
+@media (max-width: 840px) {
+    .wrapper{
+        flex-direction: column;
     }
 }
