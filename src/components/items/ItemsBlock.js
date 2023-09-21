@@ -1,6 +1,6 @@
 import React from 'react';
 import NewItem from "./NewItem";
-import ItemsContainer from "./ItemsContainer";
+import ItemsList from "./ItemsList";
 import containerStyles from '../../assets/css/Container.module.css'
 
 const ItemsBlock = () => {
@@ -9,7 +9,7 @@ const ItemsBlock = () => {
         <div className={containerStyles.containerWithShadow}>
             <h1>Items</h1>
             <NewItem/>
-            <ItemsContainer/>
+            <ItemsList/>
         </div>
     );
 };

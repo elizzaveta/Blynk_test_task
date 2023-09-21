@@ -1,9 +1,9 @@
 import React from 'react';
 import Item from "./Item";
 import {useSelector} from "react-redux";
-import styles from '../../assets/css/items/ItemsContainer.module.css'
+import styles from '../../assets/css/items/ItemsList.module.css'
 
-const ItemsContainer = () => {
+const ItemsList = () => {
     const items = useSelector(state => state.items.items);
 
     return (
@@ -15,4 +15,4 @@ const ItemsContainer = () => {
     );
 };
 
-export default ItemsContainer;
+export default ItemsList;

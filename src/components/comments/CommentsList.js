@@ -1,9 +1,9 @@
 import React from 'react';
 import Comment from "./Comment";
 import {useSelector} from "react-redux";
-import styles from '../../assets/css/comments/CommentsContainer.module.css'
+import styles from '../../assets/css/comments/CommentsList.module.css'
 
-const CommentsContainer = () => {
+const CommentsList = () => {
     const activeItem = useSelector(state => state.items.activeItem);
 
     return (
@@ -15,4 +15,4 @@ const CommentsContainer = () => {
     );
 };
 
-export default CommentsContainer;
+export default CommentsList;
