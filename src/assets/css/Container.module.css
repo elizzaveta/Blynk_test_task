@@ -1,0 +1,13 @@
+.containerWithShadow{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px #2b2f3e ;
+    height: max-content;
+    width: 500px;
+    padding: 10px;
+    align-items: flex-start;
+    background: var(--light-gray);
+}
+.containerWithShadow h1{
+    color: var(--gray);
+}

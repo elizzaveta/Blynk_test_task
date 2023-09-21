@@ -1,0 +1,33 @@
+.button{
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    z-index: 5;
+}
+.button:hover{
+    cursor: pointer;
+}
+
+.warmBlueButton{
+    background: var(--warm-blue);
+    border: 1px solid var(--warm-blue);
+    color: white;
+}
+
+.coldBlueButton{
+    background: var(--cold-blue);
+    border: 1px solid var(--cold-blue);
+    color: white;
+}
+
+.outlineRedButton{
+    background: none;
+    border: 1px solid var(--red);
+    color: var(--red);
+}
+.outlineRedButton:hover{
+    background: var(--red);
+    color: white;
+    transition: background 0.3s, color 0.3s;
+
+}

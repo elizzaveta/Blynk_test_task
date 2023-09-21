@@ -1,0 +1,23 @@
+.form{
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+
+}
+.textInput{
+    margin: 0 10px;
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 6px 12px;
+}
+.colorInput{
+    height: 60px;
+    width: 100px;
+}
+
+.textInput:focus, .colorInput:focus{
+    box-shadow: 0 0 5px 1px var(--cold-blue);
+    outline: none;
+
+}
